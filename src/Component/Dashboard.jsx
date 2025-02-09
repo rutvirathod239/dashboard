@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Grid2, styled, useMediaQuery } from "@mui/material";
+import { Box, Grid2, styled, useMediaQuery, useTheme } from "@mui/material";
 import Header from "./Header"
 import Sidebar from "./Sidebar";
 import useFetch from "./hooks/useFetch";
@@ -10,7 +10,9 @@ import UserList from "./UserList";
 import OrderData from "./OrderData";
 
 const CustomGrid = styled(Grid2)(({ theme }) => ({
-        
+    [theme.breakpoints.down("md")]: {
+        maxWidth: '96%'
+    },    
     [theme.breakpoints.down("sm")]: {
       maxWidth: '95%'
     },
@@ -21,6 +23,7 @@ const CustomGrid = styled(Grid2)(({ theme }) => ({
 
 const Dashboard = () => {
     const [open, setOpen] = useState(true);
+    const theme = useTheme();
     const orderData = {
         orders: 95,
         visitors: 83,
@@ -44,7 +47,7 @@ const Dashboard = () => {
         setOpen(!open);
     };
     return (
-        <Box sx={{ display: "flex"}}>
+        <Box sx={{ display: "flex", backgroundColor: theme.palette.background.default}}>
             <Header toggleSidebar={toggleSidebar} open={open}/>
             <Sidebar open={open}/>
             <Box 

@@ -1,5 +1,5 @@
 .logo-text {
-    color: #2e37a4;
+    color: #FFB6C1;
     font-size: 20px !important;
     font-weight: 500 !important;
     margin-left: 10px !important;
@@ -53,25 +53,25 @@
 
 @media (max-width: 600px) {
     .main-content {
-        margin: 13% 2% 5% 5%;
+        margin: 16% 2% 5% 5%;
     }
 }
 
 @media (max-width: 485px) {
     .main-content {
-        margin-top: 17%;
+        margin-top: 26%;
     }
 }
 
 @media (max-width: 420px) {
     .main-content {
-        margin-top: 19%;
+        margin-top: 35%;
         margin-right: 2%;
     }
 }
 
 @media (max-width: 355px) {
     .main-content {
-        margin-top: 26%;
+        margin-top: 35%;
     }
 }

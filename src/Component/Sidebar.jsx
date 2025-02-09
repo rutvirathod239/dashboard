@@ -36,7 +36,7 @@ const Sidebar = ({open}) => {
                   marginTop: "19%",
                 },
                 "@media (max-width: 355px)": {
-                  marginTop: "23%",
+                  marginTop: "17%",
                 }
             }
         }}>
@@ -73,11 +73,11 @@ const Sidebar = ({open}) => {
                         },
                   ]}
                 >
-                  <DashboardRoundedIcon style={{color: '#2e37a4'}}/>
+                  <DashboardRoundedIcon style={{color: '#6495ED'}}/>
                 </ListItemIcon>
                 <ListItemText
                   primary={'Dashboard'}
-                  style={{color: '#2e37a4'}}
+                  style={{color: '#6495ED'}}
                   sx={[                    
                     open
                       ? {

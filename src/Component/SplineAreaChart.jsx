@@ -1,7 +1,8 @@
-import { Card } from "@mui/material"
+import { Card, useTheme } from "@mui/material"
 import Chart from 'react-apexcharts'
 
 const SplineAreaChart = () => {
+    const theme = useTheme();
     const chartOptions = {
         chart: {
             type: "area",
@@ -41,17 +42,24 @@ const SplineAreaChart = () => {
                 "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
                 "Aug", "Sep", "Oct", "Nov", "Dec"
             ],
+            labels: {
+                style: { color: theme.palette.text.primary }, 
+            },
         },
         yaxis: {
             labels: {
                 style: {
-                colors: "#666",
+                    colors: theme.palette.text.primary,
                 },
             },
         },
         legend: {
             position: "bottom",
             horizontalAlign: "center",
+            labels: { colors: theme.palette.text.primary },
+        },
+        tooltip: {
+            theme: theme.palette.mode,
         },
     };
     
